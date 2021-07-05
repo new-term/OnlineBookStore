@@ -1,4 +1,4 @@
-package com.example.bookstore.SQLUtils;
+package com.example.bookstore.Utils;
 
 public class SQLSetting {
     //表名

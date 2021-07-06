@@ -11,13 +11,13 @@ public class Book {
     private String bookName;
     private String ISBN;
     private BigDecimal price;
-    private byte[] image;
+    private int count;
 
-    public Book(String bookName, String ISBN, BigDecimal price, byte[] image) {
+    public Book(String bookName, String ISBN, BigDecimal price, int count) {
         this.bookName = bookName;
         this.ISBN = ISBN;
         this.price = price;
-        this.image = image;
+        this.count = count;
     }
 
     public Book() {
@@ -47,12 +47,12 @@ public class Book {
         this.price = price;
     }
 
-    public byte[] getImage() {
-        return image;
+    public int getCount() {
+        return count;
     }
 
-    public void setImage(byte[] image) {
-        this.image = image;
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public boolean insertBook(){

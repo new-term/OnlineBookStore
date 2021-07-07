@@ -18,7 +18,7 @@ import okhttp3.Response;
 
 public class HttpUtils {
     //后端ip地址
-    public static final String SERVER_IP = "10.0.2.2:8080";
+    public static final String SERVER_IP = "39.102.43.0:8080";
 
     //请求类型
     public static final int SEARCH = 1;
@@ -31,17 +31,17 @@ public class HttpUtils {
     public static final int LOGIN = 8;
 
     //请求URL
-    public static final String SEARCH_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/search";
-    public static final String ADD_TO_CART_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/addtocart";
-    public static final String VIEW_CART_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/cart";
-    public static final String BUY_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/buy";
-    public static final String ORDERS_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/order";
-    public static final String ONE_ORDER_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/orderinfo";
-    public static final String MAIL_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/mail";
-    public static final String LOGIN_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/login";
+    public static final String SEARCH_URL = "http://" + SERVER_IP + "/BookStoreServer/search";
+    public static final String ADD_TO_CART_URL = "http://" + SERVER_IP + "/BookStoreServer/addtocart";
+    public static final String VIEW_CART_URL = "http://" + SERVER_IP + "/BookStoreServer/cart";
+    public static final String BUY_URL = "http://" + SERVER_IP + "/BookStoreServer/buy";
+    public static final String ORDERS_URL = "http://" + SERVER_IP + "/BookStoreServer/order";
+    public static final String ONE_ORDER_URL = "http://" + SERVER_IP + "/BookStoreServer/orderinfo";
+    public static final String MAIL_URL = "http://" + SERVER_IP + "/BookStoreServer/mail";
+    public static final String LOGIN_URL = "http://" + SERVER_IP + "/BookStoreServer/login";
 
     //图片URL
-    public static final String IMAGE_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/images/";
+    public static final String IMAGE_URL = "http://" + SERVER_IP + "/BookStoreServer/images/";
 
     /**
      * 以post请求的方式获取数据

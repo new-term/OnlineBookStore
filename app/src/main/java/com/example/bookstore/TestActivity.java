@@ -29,9 +29,8 @@ public class TestActivity extends AppCompatActivity {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
-            if(msg.what == HttpUtils.SEARCH){
-                ArrayList<Book> books = JsonUtils.getBookListFromJson((String) msg.obj);
-                result.setText("ISBN:" + books.get(0).getISBN());
+            if(msg.what == HttpUtils.LOGIN){
+                result.setText((String) msg.obj);
             }
         }
     };
@@ -43,14 +42,9 @@ public class TestActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
 
         HashMap<String, String> map = new HashMap<>();
-        String Keyword = "游";
-        try {
-            byte[] bytes = Keyword.getBytes("utf-8");
-            String str = new String(bytes, "utf-8");
-            map.put("key", str);
-            HttpUtils.getDataByPost(HttpUtils.SEARCH_URL, HttpUtils.SEARCH, map, handler);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
+        String user = "testuser";
+        map.put("user", user);
+        map.put("pass", "12345678");
+        HttpUtils.getDataByPost(HttpUtils.LOGIN_URL, HttpUtils.LOGIN, map, handler);
     }
 }

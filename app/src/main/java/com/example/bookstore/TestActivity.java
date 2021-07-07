@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bookstore.JavaBean.Book;
 import com.example.bookstore.Utils.HttpUtils;
@@ -22,15 +24,18 @@ import java.util.HashMap;
 
 public class TestActivity extends AppCompatActivity {
 
-    private TextView result;
+    private EditText user;
+    private EditText pass;
 
     private Handler handler = new Handler(Looper.getMainLooper()){
         @SuppressLint("SetTextI18n")
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
+            String jieguo;
             if(msg.what == HttpUtils.LOGIN){
-                result.setText((String) msg.obj);
+                jieguo=(String) msg.obj;
+                Toast.makeText(TestActivity.this,jieguo,Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -39,12 +44,15 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        result = findViewById(R.id.result);
+        user = findViewById(R.id.qq_user);
+        pass=findViewById(R.id.qq_password);
+
 
         HashMap<String, String> map = new HashMap<>();
-        String user = "testuser";
-        map.put("user", user);
-        map.put("pass", "12345678");
+        String user1 = user.getText().toString();
+        String pass2=pass.getText().toString();
+        map.put("user", user1);
+        map.put("pass", pass2);
         HttpUtils.getDataByPost(HttpUtils.LOGIN_URL, HttpUtils.LOGIN, map, handler);
     }
 }

@@ -29,6 +29,7 @@ public class HttpUtils {
     public static final int VIEW_ONE_ORDER = 6;
     public static final int MAIL = 7;
     public static final int LOGIN = 8;
+    public static final int SEARCH_BY_CLAASIFICATION = 9;
 
     //请求URL
     public static final String SEARCH_URL = "http://" + SERVER_IP + "/BookStoreServer/search";
@@ -39,6 +40,7 @@ public class HttpUtils {
     public static final String ONE_ORDER_URL = "http://" + SERVER_IP + "/BookStoreServer/orderinfo";
     public static final String MAIL_URL = "http://" + SERVER_IP + "/BookStoreServer/mail";
     public static final String LOGIN_URL = "http://" + SERVER_IP + "/BookStoreServer/login";
+    public static final String SEARCH_BY_CLAASIFICATION_URL = "http://" + SERVER_IP + "/BookStoreServer/classify";
 
     //图片URL
     public static final String IMAGE_URL = "http://" + SERVER_IP + "/BookStoreServer/images/";

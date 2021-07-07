@@ -54,11 +54,4 @@ public class Book {
     public void setCount(int count) {
         this.count = count;
     }
-
-    public boolean insertBook(){
-        //TODO:向服务器发出请求
-        boolean bIsSuccess = false;
-
-        return bIsSuccess;
-    }
 }

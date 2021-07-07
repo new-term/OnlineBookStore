@@ -45,8 +45,7 @@ dependencies {
     implementation files('libs\\mysql-connector-java-8.0.25.jar')
     implementation files('libs\\android-smart-image-view-1.0.0.jar')
     testImplementation 'junit:junit:4.+'
+    implementation 'com.zhy:okhttputils:2.6.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.zhy:okhttputils:2.6.2'
-
 }

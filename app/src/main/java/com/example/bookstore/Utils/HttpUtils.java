@@ -17,15 +17,31 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class HttpUtils {
+    //后端ip地址
+    public static final String SERVER_IP = "10.0.2.2:8080";
+
     //请求类型
     public static final int SEARCH = 1;
     public static final int BUY = 2;
     public static final int ADD_TO_CART = 3;
+    public static final int VIEW_CART = 4;
+    public static final int VIEW_ORDERS = 5;
+    public static final int VIEW_ONE_ORDER = 6;
+    public static final int MAIL = 7;
+    public static final int LOGIN = 8;
 
     //请求URL
-    public static final String SEARCH_URL = "http://10.0.2.2:8080/OnlineBookStoreServer_war_exploded/search";
-    public static final String ADD_TO_CART_URL = "http://10.0.2.2:8080/OnlineBookStoreServer_war_exploded/addtocart";
-    public static final String BUY_URL = "http://10.0.2.2:8080/OnlineBookStoreServer_war_exploded/buy";
+    public static final String SEARCH_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/search";
+    public static final String ADD_TO_CART_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/addtocart";
+    public static final String VIEW_CART_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/cart";
+    public static final String BUY_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/buy";
+    public static final String ORDERS_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/order";
+    public static final String ONE_ORDER_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/orderinfo";
+    public static final String MAIL_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/mail";
+    public static final String LOGIN_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/login";
+
+    //图片URL
+    public static final String IMAGE_URL = "http://" + SERVER_IP + "/OnlineBookStoreServer_war_exploded/images/";
 
     /**
      * 以post请求的方式获取数据
